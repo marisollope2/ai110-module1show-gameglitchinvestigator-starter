@@ -18,10 +18,9 @@ Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-|71     |Give go lower hint |Gave a go higher |None
-                                    hint 
-|New Game| | | |
-| | | | |
+|71     |Give a go lower hint |Gave a go higher hint |None |
+|New Game| Reset and start a new game|Displayed a message to press New Game | Game over, click new game for a new game.|
+|-1 |Return an error message, only inputs from 0-100 |Didn't return an error and accepted the input |None |
 
 ---
 
