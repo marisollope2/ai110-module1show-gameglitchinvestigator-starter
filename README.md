@@ -36,7 +36,7 @@ A sample playthrough of the fixed game on **Normal** difficulty (range 1–100, 
 1. User enters a guess of `40` and clicks Submit Guess. the game returns "Too Low" with the hint "Go HIGHER!".
 3. The score updates to `-5` (a flat penalty for each wrong guess) and `40` is added to the history.
 4. User enters a guess of `70` → the game returns "Too High" with the hint "Go LOWER!", and the score drops to `-10`.
-5. User enters a guess of `63` (the secret). The game returns "🎉 Correct!", balloons appear, and the score is awarded `100 − 10 × attempt_number`.
+5. User enters a guess of `63` (the secret). The game returns "Correct!", balloons appear, and the score is awarded `100 − 10 × attempt_number`.
 6. Tt shows "You won! The secret was 63." and locks further guesses until **New Game** is clicked, which resets the secret, score, attempts, and history.
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->

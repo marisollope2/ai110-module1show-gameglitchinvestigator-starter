@@ -52,6 +52,7 @@ It helped me understand how to format tests in a simple and readable manner and 
 ## 4. What did you learn about Streamlit and state?
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+When you interact with a Streamlit app the entire Python script reruns from top to bottom, wiping all your variables. st.session_state is a special dictionary that survives these reruns, letting you hold onto data between interactions. Think of regular variables as a whiteboard that gets erased on every click, and st.session_state as more permanent.
 
 ---
 
@@ -59,5 +60,8 @@ It helped me understand how to format tests in a simple and readable manner and 
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+In the future, I'll definitely open a new chat for each bug because I feel like that helped me keep track of changes and prevented unneccesary additions of random files or functions.
 - What is one thing you would do differently next time you work with AI on a coding task?
+Give more precise prompting so the AI doesn't deviate or hallucinate.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+I think AI generated code can be almost simpler to read than other code because it adds comments and has well-done syntax that maybe other devs lack. AI is useful but should always be checked.
