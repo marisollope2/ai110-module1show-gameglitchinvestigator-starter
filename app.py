@@ -25,6 +25,8 @@ def parse_guess(raw: str):
             value = int(raw)
     except Exception:
         return False, None, "That is not a number."
+    
+    # FIX ME: check for inputs in range respective to difficulty level
 
     return True, value, None
 
@@ -35,6 +37,7 @@ def check_guess(guess, secret):
 
     try:
         if guess > secret:
+            # FIX ME: Logic breaks here
             return "Too High", "📈 Go HIGHER!"
         else:
             return "Too Low", "📉 Go LOWER!"
