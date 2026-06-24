@@ -8,14 +8,19 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
 
+- Gives opposite hints. I guessed 71 when the answer was 61 and it said go higher instead of lower
+- Clicked new game and it said game over and to click to start a new game.
+- Takes in negative inputs when the range should only be 0-100
+
 **Bug Reproduction Log**
 
 Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
+|71     |Give go lower hint |Gave a go higher |None
+                                    hint 
+|New Game| | | |
 | | | | |
 
 ---
