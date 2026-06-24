@@ -27,17 +27,25 @@ Document at least 3 bugs you found. Add rows as needed.
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+I used Claude Code in VS Code.
+
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+The AI suggested I redo the difficulty for Hard because It didn't make much sense for it to have a smaller range than normal despit having less attempts. I did my own work to compare the chance of a user getting it correct within the attempted tries for each and decided to change the logic for hard mode.
+
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
+To be honest, I didn't find a specific incorrect suggestion. The AI did bring up random edge cases for the input type that I didn't think were necessary because I had already tested them in the game.
+
 
 ---
 
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
-- Describe at least one test you ran (manual or using pytest)  
-  and what it showed you about your code.
+I had the game open and tested it after the code was changed. I also had claude brainstorm edge cases.
+- Describe at least one test you ran (manual or using pytest) and what it showed you about your code.
+  After the game status bug was fixed, I tried it in the game to verify after receiving different scores and with even and odd attempts. I was able to start a new game after clicking the button.
 - Did AI help you design or understand any tests? How?
+It helped me understand how to format tests in a simple and readable manner and account for edge cases.
 
 ---
 

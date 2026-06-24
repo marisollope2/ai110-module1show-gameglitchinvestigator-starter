@@ -5,6 +5,8 @@ def get_range_for_difficulty(difficulty: str):
     if difficulty == "Normal":
         return 1, 100
     if difficulty == "Hard":
+        # Hard should be the widest, so we bumped it
+        # from 1-50 to 1-200.
         return 1, 200
     return 1, 100
 
@@ -30,6 +32,9 @@ def parse_guess(raw: str, low: int, high: int):
     except Exception:
         return False, None, "That is not a number."
 
+    # I spotted that negative and out-of-range guesses were being accepted.
+    # Claude first proposed validating in app.py. I asked to move parse_guess
+    # here and add the range check.
     if value < low or value > high:
         return False, None, f"Guess must be between {low} and {high}."
 
@@ -46,6 +51,10 @@ def check_guess(guess, secret):
     if guess == secret:
         return "Win", "🎉 Correct!"
 
+    # I reported the game saying "Go HIGHER!" when a
+    # guess was already too high. We traced it together to the hint strings
+    # being attached to the wrong branches, then moved this function here from
+    # app.py and corrected them — too high -> go LOWER, too low -> go HIGHER.
     if guess > secret:
         return "Too High", "📉 Go LOWER!"
     return "Too Low", "📈 Go HIGHER!"
@@ -53,6 +62,10 @@ def check_guess(guess, secret):
 
 def update_score(current_score: int, outcome: str, attempt_number: int):
     """Update score based on outcome and attempt number."""
+    # We reviewed the scoring together and found two issues I flagged:
+    # an off-by-one in the Win formula (it used attempt_number + 1, so a
+    # first-try win was underpaid) and a "Too High" branch that ADDED points
+    # on even attempts. We dropped the +1 and made every wrong guess a flat -5.
     if outcome == "Win":
         points = 100 - 10 * attempt_number
         if points < 10:

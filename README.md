@@ -31,13 +31,13 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📸 Demo Walkthrough
 
-Describe your fixed game in numbered steps so a reader can follow along without watching a video:
+A sample playthrough of the fixed game on **Normal** difficulty (range 1–100, secret = 63), so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. User enters a guess of `40` and clicks Submit Guess. the game returns "Too Low" with the hint "Go HIGHER!".
+3. The score updates to `-5` (a flat penalty for each wrong guess) and `40` is added to the history.
+4. User enters a guess of `70` → the game returns "Too High" with the hint "Go LOWER!", and the score drops to `-10`.
+5. User enters a guess of `63` (the secret). The game returns "🎉 Correct!", balloons appear, and the score is awarded `100 − 10 × attempt_number`.
+6. Tt shows "You won! The secret was 63." and locks further guesses until **New Game** is clicked, which resets the secret, score, attempts, and history.
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
@@ -46,7 +46,7 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 ```
 # Paste your pytest output here, e.g.:
 # pytest tests/
-# ========================= X passed in 0.XXs =========================
+# ========================= 15 passed in 0.04s =========================
 ```
 
 ## 🚀 Stretch Features
